@@ -1,6 +1,6 @@
-package com.kafka.opensearch;
+package com.kafka.mongodb;
 
-import com.kafka.opensearch.service.WikimediaService;
+import com.kafka.mongodb.service.WikimediaService;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -23,6 +23,8 @@ public class MongoDBRunner implements CommandLineRunner {
 
     @Autowired
     private WikimediaService wikimediaService;
+
+    private static final String TOPIC="wikimedia-data-topic";
 
     public static KafkaConsumer<String,String> createKafkaConsumer(){
         Properties properties = new Properties();
@@ -69,7 +71,7 @@ public class MongoDBRunner implements CommandLineRunner {
         });
 
         try {
-            kafkaConsumer.subscribe(Collections.singleton("wikimedia-data-topic3"));
+            kafkaConsumer.subscribe(Collections.singleton(TOPIC));
 
             while (true){
                 ConsumerRecords<String,String> records = kafkaConsumer.poll(Duration.ofMillis(1000));

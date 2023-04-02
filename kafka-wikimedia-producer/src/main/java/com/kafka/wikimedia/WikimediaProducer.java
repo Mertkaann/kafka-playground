@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class WikimediaProducer {
 
-    private static final String TOPIC="wikimedia-data-topic3";
+    private static final String TOPIC="wikimedia-data-topic";
 
     public static void main(String[] args) throws InterruptedException {
         Properties properties = new Properties();
@@ -27,7 +27,7 @@ public class WikimediaProducer {
         properties.setProperty(ProducerConfig.RETRIES_CONFIG, "0");
         properties.setProperty(ProducerConfig.BATCH_SIZE_CONFIG, Integer.toString(32*1024));
         properties.setProperty(ProducerConfig.LINGER_MS_CONFIG, "20");
-        properties.setProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG,"snappy");
+        //properties.setProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG,"snappy");
 
         KafkaProducer<String,String> producer = new KafkaProducer<>(properties);
 

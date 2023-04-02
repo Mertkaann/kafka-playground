@@ -1,7 +1,7 @@
-package com.kafka.opensearch.repository;
+package com.kafka.mongodb.repository;
 
 
-import com.kafka.opensearch.Model.Wikimedia;
+import com.kafka.mongodb.Model.Wikimedia;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

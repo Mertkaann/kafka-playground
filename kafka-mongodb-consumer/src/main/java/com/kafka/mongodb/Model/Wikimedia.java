@@ -1,4 +1,4 @@
-package com.kafka.opensearch.Model;
+package com.kafka.mongodb.Model;
 
 
 import lombok.AllArgsConstructor;
@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigDecimal;
 import java.util.UUID;
 
 @Document(value = "wikimedia")

@@ -1,9 +1,7 @@
-package com.kafka.opensearch.service;
+package com.kafka.mongodb.service;
 
-import com.kafka.opensearch.Model.Wikimedia;
-import com.kafka.opensearch.repository.WikimediaRepository;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import com.kafka.mongodb.Model.Wikimedia;
+import com.kafka.mongodb.repository.WikimediaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

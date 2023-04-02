@@ -1,4 +1,4 @@
-package com.kafka.opensearch.service;
+package com.kafka.mongodb.service;
 
 
 
